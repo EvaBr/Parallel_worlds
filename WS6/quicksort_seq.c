@@ -19,7 +19,6 @@ void quicksort(int *a, int left, int right, int num_threads)
 
 	  int swapIdx = left;
 
-
 	  for(int i=left; i < right; i++)
 	  {
 		  if(a[i] <= pivotVal)
@@ -28,10 +27,7 @@ void quicksort(int *a, int left, int right, int num_threads)
 			  swapIdx++;
 		  }
 	  }
-
-
 	  swap(a + swapIdx, a + right);
-
 
 	  quicksort(a, left, swapIdx - 1, num_threads);
 	  quicksort(a, swapIdx + 1, right, num_threads);
